@@ -14,9 +14,8 @@ maintainers = ["eric_G"]
 [upstream]
 license = "GPL-2.0"
 website = "https://www.htmly.com/"
-demo = "https://demo.example.com"
-admindoc = "https://doc.yunohost.org/dev/packaging/"
-userdoc = "https://yunohost.org/apps"
+demo = "https://demo.htmly.com/"
+admindoc = "https://docs.htmly.com/"
 code = "https://github.com/danpros/htmly"
 
 [integration]
@@ -38,11 +37,9 @@ ram.runtime = "50M"
 
     [install.path]
     type = "path"
-    default = "/example"
+    default = "/htmly"
 
     [install.init_main_permission]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    # This won't be saved as setting and will instead be used to initialize the SSOwat permission
     type = "group"
     default = "visitors"
 
@@ -67,16 +64,8 @@ ram.runtime = "50M"
 
     [resources.install_dir]
 
-    [resources.data_dir]
-
     [resources.permissions]
     main.url = "/"
 
     [resources.apt]
-    # This will automatically install/uninstall the following apt packages
-    # and implicitly define the $phpversion setting as 8.0 (if phpX.Y-foobar dependencies are listed)
-    packages = "mariadb-server, deb1, deb2, php8.3-foo, php8.3-bar"
-
-    [resources.database]
-    # This will automatically provision/deprovison a MySQL DB and store the corresponding credentials in settings $db_user, $db_name, $db_pwd
-    type = "mysql"
+    packages = "php8.5-xml, php8.5-zip, php8.5-mbstring, php8.5-gb, php8.5-intl"
