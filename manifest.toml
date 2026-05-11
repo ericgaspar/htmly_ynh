@@ -56,8 +56,7 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     url = "https://github.com/danpros/htmly/archive/refs/tags/v3.1.1.tar.gz"
-    sha256 = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
-
+    sha256 = "a458ab4d5b165f6f42859d1af7e1714e9ebc07c59ad0c77ae333970197a127be"
     autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
