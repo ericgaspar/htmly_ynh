@@ -37,7 +37,6 @@ ram.runtime = "50M"
     type = "domain"
 
     [install.path]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "path"
     default = "/example"
 
@@ -54,17 +53,6 @@ ram.runtime = "50M"
     choices = ["en_US", "de_DE", "fr_FR"]
     default = "fr_FR"
 
-    [install.admin]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    type = "user"
-
-    [install.password]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    # Note that user-provided passwords questions are not automatically saved as setting
-    help.en = "Use the help field to add an information for the admin about this question."
-    help.fr = "Utilisez le champ aide pour ajouter une information à l'intention de l'administrateur à propos de cette question."
-    type = "password"
-
 [resources]
 
     [resources.sources]
@@ -73,7 +61,7 @@ ram.runtime = "50M"
     url = "https://github.com/danpros/htmly/archive/refs/tags/v3.1.1.tar.gz"
     sha256 = "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"
 
-    # autoupdate.strategy = "latest_github_tag"
+    autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
 
